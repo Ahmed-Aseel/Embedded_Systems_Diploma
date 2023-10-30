@@ -10,9 +10,9 @@
 void ADC_App_ISR(void);
 
 Std_ReturnType ret = E_NOT_OK;
-uint16 adc1_res, adc2_res, adc3_res, adc4_res;
+volatile uint16 adc1_res, adc2_res, adc3_res, adc4_res;
 uint8 adc1_res_txt[6], adc2_res_txt[6], adc3_res_txt[6], adc4_res_txt[6];
-uint8 ADC_Req = 0;
+volatile uint8 ADC_Req = 0;
 
 adc_config_t adc_obj = {
     .acquisition_time = ADC_12_TAD, 
